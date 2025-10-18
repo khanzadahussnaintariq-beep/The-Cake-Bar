@@ -156,7 +156,7 @@ function initializeDynamicBackground() {
     document.head.appendChild(rippleStyle);
 }
 
-// Interactive Lines Animation
+// Interactive Lines Animation - Fixed for dark/light mode
 function initializeInteractiveLines() {
     const linesContainer = document.getElementById('interactiveLines');
     
@@ -192,6 +192,8 @@ function initializeInteractiveLines() {
             );
             
             if (distance < 200) {
+                // Use dark brown color for both light and dark modes
+                line.style.background = '#8b6f47';
                 line.style.opacity = Math.max(0.1, 0.5 - distance / 400);
             } else {
                 line.style.opacity = '0';
@@ -325,7 +327,7 @@ function initializeThemeToggle() {
     }
 }
 
-// Mobile menu functionality
+// Mobile menu functionality - Fixed
 function initializeMobileMenu() {
     const mobileToggle = document.getElementById('mobileMenuToggle');
     const navLinks = document.getElementById('navLinks');
@@ -337,9 +339,11 @@ function initializeMobileMenu() {
     });
 
     // Close mobile menu when clicking on a link
-    navLinks.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        toggleIcon.className = 'fas fa-bars';
+    navLinks.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            navLinks.classList.remove('active');
+            toggleIcon.className = 'fas fa-bars';
+        }
     });
 
     // Close mobile menu when clicking outside
