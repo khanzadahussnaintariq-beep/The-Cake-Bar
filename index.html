@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cake Bar - Because Every Occasion Deserves A Cake</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dynamic Background Animation -->
+    <div class="dynamic-background" id="dynamicBackground"></div>
+
+    <!-- Interactive Lines -->
+    <div class="interactive-lines" id="interactiveLines"></div>
+
+    <!-- Floating bakery elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <img id="modalImage" src="" alt="Enlarged view">
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <div class="logo-image">
+                    <!-- Logo image - replaced with The Cake Bar logo -->
+                    <img src="/images/logo.jpg" alt="The Cake Bar Logo">
+                </div>
+                <div class="logo-text">
+                    <h1>The Cake Bar</h1>
+                    <span class="tagline">Because Every Occasion Deserves A Cake</span>
+                </div>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary">Order Now</a>
+                <a href="#" class="btn btn-outline" onclick="openLogin()">Login</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>SweetBites — Taste The Love In Every Bite</h1>
+                    <p class="subtitle">Handcrafted desserts made with premium ingredients and endless passion for creating memorable moments</p>
+                    
+                    <div class="badges">
+                        <span class="badge"><i class="fas fa-leaf"></i> Baked Fresh Daily</span>
+                        <span class="badge"><i class="fas fa-birthday-cake"></i> Custom Cakes</span>
+                        <span class="badge"><i class="fas fa-seedling"></i> Other Options</span>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary">See Menu</a>
+                        <a href="#gallery" class="btn btn-primary">View Gallery</a>
+                    </div>
+                </div>
+
+                <div class="specials-card scroll-animate">
+                    <h3>Today's Specials</h3>
+                    <div class="special-item">
+                        <div class="special-item-image">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Signature Chocolate Cake">
+                        </div>
+                        <div>
+                            <h4>Signature Chocolate Cake</h4>
+                            <small>Rich, decadent chocolate layers with premium cocoa</small>
+                        </div>
+                        <span class="price">PKR 1,999</span>
+                    </div>
+                    <div class="special-item">
+                        <div class="special-item-image">
+                            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Mini Cupcake Box">
+                        </div>
+                        <div>
+                            <h4>Mini Cupcake Box (3)</h4>
+                            <small>Assorted flavors, perfectly sized treats</small>
+                        </div>
+                        <span class="price">PKR 999</span>
+                    </div>
+                    <div class="special-item">
+                        <div class="special-item-image">
+                            <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Artisan Sourdough Loaf">
+                        </div>
+                        <div>
+                            <h4>Artisan Sourdough Loaf</h4>
+                            <small>Traditional recipe, fresh baked daily</small>
+                        </div>
+                        <span class="price">PKR 999</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Our Menu</h1>
+                <p class="subtitle">Pickup Or Delivery Available — Pre-Order For Custom Cakes</p>
+            </div>
+
+            <div class="menu-container">
+                <div class="menu-track">
+                    <div class="menu-category" id="menuCategory1">
+                        <h3><i class="fas fa-birthday-cake"></i> Signature Cakes</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Signature Chocolate">
+                            </div>
+                            <div>
+                                <h4>Signature Chocolate</h4>
+                                <small>Rich chocolate layers with premium ganache</small>
+                            </div>
+                            <span class="price">PKR 2,500</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Vanilla Velvet">
+                            </div>
+                            <div>
+                                <h4>Vanilla Velvet</h4>
+                                <small>Classic vanilla with smooth buttercream</small>
+                            </div>
+                            <span class="price">PKR 2,200</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1586788680434-30d324b2d46f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Red Velvet">
+                            </div>
+                            <div>
+                                <h4>Red Velvet</h4>
+                                <small>Traditional red velvet with cream cheese frosting</small>
+                            </div>
+                            <span class="price">PKR 2,200</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Lemon Drizzle">
+                            </div>
+                            <div>
+                                <h4>Lemon Drizzle</h4>
+                                <small>Fresh lemon cake with tangy glaze</small>
+                            </div>
+                            <span class="price">PKR 2,200</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-category" id="menuCategory2">
+                        <h3><i class="fas fa-cookie-bite"></i> Pastries & Sweets</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="/images/ver.jpg" alt="Butter Croissant">
+                            </div>
+                            <div>
+                                <h4>Butter Croissant</h4>
+                                <small>Buttery, flaky French pastry perfection</small>
+                            </div>
+                            <span class="price">PKR 350</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Chocolate Eclair">
+                            </div>
+                            <div>
+                                <h4>Chocolate Eclair</h4>
+                                <small>Choux pastry with delicate cream filling</small>
+                            </div>
+                            <span class="price">PKR 350</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="French Macaron">
+                            </div>
+                            <div>
+                                <h4>French Macaron</h4>
+                                <small>Delicate almond pastry in various flavors</small>
+                            </div>
+                            <span class="price">PKR 350</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Danish Pastry">
+                            </div>
+                            <div>
+                                <h4>Danish Pastry</h4>
+                                <small>Flaky pastry with fruit or cream filling</small>
+                            </div>
+                            <span class="price">PKR 350</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-category" id="menuCategory3">
+                        <h3><i class="fas fa-heart"></i> Special Occasions</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Wedding Cake">
+                            </div>
+                            <div>
+                                <h4>Wedding Deal</h4>
+                                <small>Multi-tier custom designed wedding cakes</small>
+                            </div>
+                            <span class="price">From PKR 10,999</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Birthday Cake">
+                            </div>
+                            <div>
+                                <h4>Birthday Deal</h4>
+                                <small>Personalized birthday cakes with decorations</small>
+                            </div>
+                            <span class="price">From PKR 1,800</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Cupcake Tower">
+                            </div>
+                            <div>
+                                <h4>Cupcake Tower</h4>
+                                <small>Elegant cupcake display for events</small>
+                            </div>
+                            <span class="price">From PKR 1,800</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Anniversary Cake">
+                            </div>
+                            <div>
+                                <h4>Anniversary Cake</h4>
+                                <small>Romantic designs for special celebrations</small>
+                            </div>
+                            <span class="price">From PKR 2,800</span>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate categories for seamless loop -->
+                    <div class="menu-category">
+                        <h3><i class="fas fa-birthday-cake"></i> Signature Cakes</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Signature Chocolate">
+                            </div>
+                            <div>
+                                <h4>Signature Chocolate</h4>
+                                <small>Rich chocolate layers with premium ganache</small>
+                            </div>
+                            <span class="price">PKR 2,500</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Vanilla Velvet">
+                            </div>
+                            <div>
+                                <h4>Vanilla Velvet</h4>
+                                <small>Classic vanilla with smooth buttercream</small>
+                            </div>
+                            <span class="price">PKR 2,200</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1586788680434-30d324b2d46f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Red Velvet">
+                            </div>
+                            <div>
+                                <h4>Red Velvet</h4>
+                                <small>Traditional red velvet with cream cheese frosting</small>
+                            </div>
+                            <span class="price">PKR 2,200</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Lemon Drizzle">
+                            </div>
+                            <div>
+                                <h4>Lemon Drizzle</h4>
+                                <small>Fresh lemon cake with tangy glaze</small>
+                            </div>
+                            <span class="price">PKR 2,200</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3><i class="fas fa-cookie-bite"></i> Pastries & Sweets</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="/images/ver.jpg" alt="Butter Croissant">
+                            </div>
+                            <div>
+                                <h4>Butter Croissant</h4>
+                                <small>Buttery, flaky French pastry perfection</small>
+                            </div>
+                            <span class="price">PKR 350</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Chocolate Eclair">
+                            </div>
+                            <div>
+                                <h4>Chocolate Eclair</h4>
+                                <small>Choux pastry with delicate cream filling</small>
+                            </div>
+                            <span class="price">PKR 350</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="French Macaron">
+                            </div>
+                            <div>
+                                <h4>French Macaron</h4>
+                                <small>Delicate almond pastry in various flavors</small>
+                            </div>
+                            <span class="price">PKR 350</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Danish Pastry">
+                            </div>
+                            <div>
+                                <h4>Danish Pastry</h4>
+                                <small>Flaky pastry with fruit or cream filling</small>
+                            </div>
+                            <span class="price">PKR 350</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3><i class="fas fa-heart"></i> Special Occasions</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Wedding Cake">
+                            </div>
+                            <div>
+                                <h4>Wedding Deal</h4>
+                                <small>Multi-tier custom designed wedding cakes</small>
+                            </div>
+                            <span class="price">From PKR 10,999</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Birthday Cake">
+                            </div>
+                            <div>
+                                <h4>Birthday Deal</h4>
+                                <small>Personalized birthday cakes with decorations</small>
+                            </div>
+                            <span class="price">From PKR 1,800</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Cupcake Tower">
+                            </div>
+                            <div>
+                                <h4>Cupcake Tower</h4>
+                                <small>Elegant cupcake display for events</small>
+                            </div>
+                            <span class="price">From PKR 1,800</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Anniversary Cake">
+                            </div>
+                            <div>
+                                <h4>Anniversary Cake</h4>
+                                <small>Romantic designs for special celebrations</small>
+                            </div>
+                            <span class="price">From PKR 2,800</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Our Gallery</h1>
+                <p class="subtitle">A visual feast of our handcrafted creations</p>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-track">
+                    <div class="gallery-item scroll-animate">
+                        <img src="https://images.unsplash.com/photo-1517423568366-8b83523036fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=350&q=80" alt="Chocolate Masterpiece">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/01.jpg" alt="Wedding Cake Collection">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/02.jpg" alt="Artisan Pastries">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/03.jpg" alt="Custom Birthday Cakes">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/04.jpg" alt="Fresh Bread Selection">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/05.jpg" alt="Seasonal Specialties">
+                    </div>
+                    <!-- Duplicate items for seamless loop -->
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/06.jpg" alt="Chocolate Masterpiece">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/07.jpg" alt="Wedding Cake Collection">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/08.jpg" alt="Artisan Pastries">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/09.jpg" alt="Custom Birthday Cakes">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/10.jpg" alt="Fresh Bread Selection">
+                    </div>
+                    <div class="gallery-item scroll-animate">
+                        <img src="/images/11.jpg" alt="Seasonal Specialties">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>About SweetBites</h1>
+                <p class="subtitle">Our story of passion, quality, and sweet memories</p>
+            </div>
+
+            <div class="about-content scroll-animate">
+                <h2>Our Story</h2>
+                <p>SweetBites Bakery was founded by Fatima Khan with a passion for handmade desserts and high-quality ingredients. We focus on freshness, artistry, and creating everyday moments of joy through our carefully crafted baked goods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Customer Reviews</h1>
+                <p class="subtitle">Share Your Experience With SweetBites Bakery</p>
+            </div>
+
+            <div class="reviews-content">
+                <div class="review-form scroll-animate">
+                    <h3>Leave a Review</h3>
+                    <form id="reviewForm">
+                        <div class="star-rating">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewName">Your Name</label>
+                            <input type="text" id="reviewName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewText">Your Review</label>
+                            <textarea id="reviewText" placeholder="Share your experience with us..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                </div>
+
+                <div class="reviews-container">
+                    <div class="reviews-track">
+                        <div class="review-card scroll-animate">
+                            <div class="review-header">
+                                <span class="reviewer-name">Ahmed Khan</span>
+                                <span class="review-stars">★★★★★</span>
+                            </div>
+                            <p class="review-text">"Absolutely amazing cakes! The chocolate cake was incredibly rich and moist. Perfect for our anniversary celebration. The staff was also very helpful with customization."</p>
+                        </div>
+                        <div class="review-card scroll-animate">
+                            <div class="review-header">
+                                <span class="reviewer-name">Fatima Rahman</span>
+                                <span class="review-stars">★★★★★</span>
+                            </div>
+                            <p class="review-text">"Best bakery in town! Their custom wedding cake exceeded all our expectations. Beautiful design and delicious taste. All our guests were impressed!"</p>
+                        </div>
+                        <div class="review-card scroll-animate">
+                            <div class="review-header">
+                                <span class="reviewer-name">Zainab Malik</span>
+                                <span class="review-stars">★★★★☆</span>
+                            </div>
+                            <p class="review-text">"Love their vegan options! Finally found a place that caters to dietary restrictions without compromising on taste. The almond flour cupcakes are divine."</p>
+                        </div>
+                        <div class="review-card scroll-animate">
+                            <div class="review-header">
+                                <span class="reviewer-name">Hassan Ali</span>
+                                <span class="review-stars">★★★★★</span>
+                            </div>
+                            <p class="review-text">"Fresh bread daily and amazing pastries. The croissants are perfectly flaky and buttery. Great quality at reasonable prices. Highly recommended!"</p>
+                        </div>
+                        <!-- Duplicate reviews for seamless loop -->
+                        <div class="review-card scroll-animate">
+                            <div class="review-header">
+                                <span class="reviewer-name">Ahmed Khan</span>
+                                <span class="review-stars">★★★★★</span>
+                            </div>
+                            <p class="review-text">"Absolutely amazing cakes! The chocolate cake was incredibly rich and moist. Perfect for our anniversary celebration. The staff was also very helpful with customization."</p>
+                        </div>
+                        <div class="review-card scroll-animate">
+                            <div class="review-header">
+                                <span class="reviewer-name">Fatima Rahman</span>
+                                <span class="review-stars">★★★★★</span>
+                            </div>
+                            <p class="review-text">"Best bakery in town! Their custom wedding cake exceeded all our expectations. Beautiful design and delicious taste. All our guests were impressed!"</p>
+                        </div>
+                        <div class="review-card scroll-animate">
+                            <div class="review-header">
+                                <span class="reviewer-name">Zainab Malik</span>
+                                <span class="review-stars">★★★★☆</span>
+                            </div>
+                            <p class="review-text">"Love their vegan options! Finally found a place that caters to dietary restrictions without compromising on taste. The almond flour cupcakes are divine."</p>
+                        </div>
+                        <div class="review-card scroll-animate">
+                            <div class="review-header">
+                                <span class="reviewer-name">Hassan Ali</span>
+                                <span class="review-stars">★★★★★</span>
+                            </div>
+                            <p class="review-text">"Fresh bread daily and amazing pastries. The croissants are perfectly flaky and buttery. Great quality at reasonable prices. Highly recommended!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Get In Touch</h1>
+                <p class="subtitle">Ready to order or have questions? We'd love to hear from you</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info scroll-animate">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+92 300 1234567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 302 6372566</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6ded3dadad9f6c5c1d3d3c2d4dfc2d3c598d5d9db">[email&#160;protected]</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form scroll-animate">
+                    <h3>Send Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="orderType">Order Type</label>
+                            <select id="orderType" style="width: 100%; padding: 1rem; border: 2px solid var(--secondary-cream); border-radius: 15px; font-family: inherit; background: var(--primary-cream); color: var(--text-dark);">
+                                <option value="">Select Order Type</option>
+                                <option value="custom-cake">Custom Cake</option>
+                                <option value="regular-order">Regular Order</option>
+                                <option value="wedding-cake">Wedding Cake</option>
+                                <option value="birthday-cake">Birthday Cake</option>
+                                <option value="inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell us about your requirements, preferred dates, design ideas, or any special requests..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="payment-section scroll-animate">
+                <h3>Payment Options</h3>
+                <div class="payment-options">
+                    <div class="payment-option">
+                        <div class="payment-option-image">
+                            <img src="/images/jazzcash.jpg" alt="JazzCash">
+                        </div>
+                        <h4>JazzCash</h4>
+                    </div>
+                    <div class="payment-option">
+                        <div class="payment-option-image">
+                            <img src="/images/easypaisaa.jpg" alt="EasyPaisa">
+                        </div>
+                        <h4>EasyPaisa</h4>
+                    </div>
+                    <div class="payment-option">
+                        <div class="payment-option-image">
+                            <img src="/images/visa.jpg" alt="Credit Card">
+                        </div>
+                        <h4>Credit Card</h4>
+                    </div>
+                    <div class="payment-option">
+                        <div class="payment-option-image">
+                            <img src="/images/cash on delivery.jpg" alt="Cash on Delivery">
+                        </div>
+                        <h4>Cash on Delivery</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Credits Content -->
+                <div class="credits-content">
+                    <div class="credits-logo">
+                        <img src="/images/quicksite.jpg" alt="QuickSite Logo">
+                        <span>QuickSite</span>
+                    </div>
+                    <p>This portfolio website was crafted with expertise by <strong>QuickSite</strong></p>
+                    <div class="credits-links">
+                        <a href="https://quick-site-00.vercel.app/" class="credits-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit Our Website
+                        </a>
+                        <a href="https://quick-site-00.vercel.app/#contact" class="credits-link" target="_blank">
+                            <i class="fas fa-handshake"></i>
+                            Work With Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>
